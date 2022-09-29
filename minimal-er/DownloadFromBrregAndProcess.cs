@@ -98,7 +98,7 @@ namespace minimal_er
                 _logger.LogInformation("Uploading blob ...");
                 outputStream.Position = 0;
                 var blobClient = containerClient.GetBlobClient("mainunits2.tsv");
-                await blobClient.UploadAsync(outputStream);
+                await blobClient.UploadAsync(outputStream, overwrite: true);
                 _logger.LogInformation("Upload complete");
             }
 
