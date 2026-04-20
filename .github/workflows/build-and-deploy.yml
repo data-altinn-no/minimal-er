@@ -1,5 +1,9 @@
 name: Deploy func-minimal-er
 
+permissions:
+  actions: read
+  contents: read
+
 on:
  push:
    branches: [ main ]
